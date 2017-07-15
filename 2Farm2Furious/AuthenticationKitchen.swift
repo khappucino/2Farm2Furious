@@ -3,11 +3,11 @@ import RxSwift
 
 class AuthenticationKitchen: AuthenticationKitchener {
     
-    private let fastAndTheFuriousCastValidator: FastAndTheFuriousCastValidator
+    private let fieldValidating: FieldValidating
     private let coronaService: CoronaService
     
-    init(fastAndTheFuriousCastValidator: FastAndTheFuriousCastValidator, coronaService: CoronaService) {
-        self.fastAndTheFuriousCastValidator = fastAndTheFuriousCastValidator
+    init(fieldValidating: FieldValidating, coronaService: CoronaService) {
+        self.fieldValidating = fieldValidating
         self.coronaService = coronaService
     }
     
@@ -25,10 +25,10 @@ class AuthenticationKitchen: AuthenticationKitchener {
     private func validateTextType(_ textType: LoginViewTextType) -> Observable<LoginViewState> {
         switch textType {
         case .username(let value):
-            let isValid = fastAndTheFuriousCastValidator.validateUserName(value)
+            let isValid = fieldValidating.validateUsername(value)
             return Observable.just(.username(isValid))
         case .password(let value):
-            let isValid = fastAndTheFuriousCastValidator.validatePassword(value)
+            let isValid = fieldValidating.validatePassword(value)
             return Observable.just(.password(isValid))
         }
     }
@@ -37,11 +37,11 @@ class AuthenticationKitchen: AuthenticationKitchener {
         var usernameSuccess = false
         var passwordSuccess = false
         if case let LoginViewTextType.username(value) = usernameTextType {
-            usernameSuccess = fastAndTheFuriousCastValidator.validateUserName(value)
+            usernameSuccess = fieldValidating.validateUsername(value)
         }
         
         if case let LoginViewTextType.password(value) = passwordTextType {
-            passwordSuccess = fastAndTheFuriousCastValidator.validatePassword(value)
+            passwordSuccess = fieldValidating.validatePassword(value)
         }
         
         if usernameSuccess && passwordSuccess {

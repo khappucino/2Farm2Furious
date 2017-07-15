@@ -11,14 +11,14 @@ extension SwinjectStoryboard {
             }
         }
         
-        defaultContainer.register(FastAndTheFuriousCastValidator.self) { _ in
-            return FastAndTheFuriousCastValidator()
+        defaultContainer.register(FieldValidating.self) { _ in
+            return StandardFieldValidator()
         }
         
         defaultContainer.register(AuthenticationKitchener.self) { resolver in
-            let fnfValidator = resolver.resolve(FastAndTheFuriousCastValidator.self)!
+            let fnfValidator = resolver.resolve(FieldValidating.self)!
             let coronaService = resolver.resolve(CoronaService.self)!
-            return AuthenticationKitchen(fastAndTheFuriousCastValidator: fnfValidator, coronaService: coronaService)
+            return AuthenticationKitchen(fieldValidating: fnfValidator, coronaService: coronaService)
         }
         
         defaultContainer.register(CoronaService.self) { _ in

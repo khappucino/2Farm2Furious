@@ -1,7 +1,7 @@
 import Foundation
 
-class FastAndTheFuriousCastValidator {
-    func validateUserName(_ username: String) -> Bool {
+class FastAndTheFuriousCastValidator: FieldValidating {
+    func validateUsername(_ username: String) -> Bool {
         return username == "toretto"
     }
     

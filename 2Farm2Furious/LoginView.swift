@@ -25,11 +25,14 @@ class LoginView: UIView {
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    private let disposeBag = DisposeBag()
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addNibView()
-        self.translatesAutoresizingMaskIntoConstraints = false
+        translatesAutoresizingMaskIntoConstraints = false
+        setupErrorReset()
+        
     }
     
     func validatedTextStream() -> Observable<LoginViewEvent> {
@@ -74,6 +77,25 @@ class LoginView: UIView {
         passwordTextField.layer.borderColor = UIColor.darkGray.cgColor
     }
 
+    private func setupErrorReset() {
+        usernameTextField.rx.text.subscribe(onNext: { [weak self] (text) in
+            if let welf = self {
+                let textOrEmpty = text ?? ""
+                if textOrEmpty.isEmpty {
+                    welf.updateTextFieldBorder(welf.usernameTextField, isValid: true)
+                }
+            }
+        }).disposed(by: disposeBag)
+        
+        passwordTextField.rx.text.subscribe(onNext: { [weak self] (text) in
+            if let welf = self {
+                let textOrEmpty = text ?? ""
+                if textOrEmpty.isEmpty {
+                    welf.updateTextFieldBorder(welf.passwordTextField, isValid: true)
+                }
+            }
+        }).disposed(by: disposeBag)
+    }
     
     private func getButtonTappedAndTextFieldTexts() -> Observable<LoginViewEvent> {
         let userNameTextTypeObs = usernameTextField.rx.text.map { (text) in

@@ -4,11 +4,24 @@ import SwinjectStoryboard
 
 extension SwinjectStoryboard {
     class func setup() {
+        
         defaultContainer.storyboardInitCompleted(AuthenticationViewController.self) { resolver, controller in
-            if let authenticationViewController = controller as? AuthenticationViewController {
-                let authenticationKitchener = resolver.resolve(AuthenticationKitchener.self)!
-                authenticationViewController.inject(authenticationKitchener: authenticationKitchener)
-            }
+            let authenticationKitchener = resolver.resolve(AuthenticationKitchener.self)!
+            controller.inject(authenticationKitchener: authenticationKitchener)
+        }
+        
+        defaultContainer.register(StoryboardProvider.self) { _ in
+            return StoryboardProvider()
+        }.inObjectScope(.container)
+        
+        defaultContainer.register(NavigationControllerProvider.self) { _ in
+            return NavigationControllerProvider()
+        }.inObjectScope(.container)
+        
+        defaultContainer.register(AuthenticationVCRouting.self) { resolver in
+            let storyboardProvider = resolver.resolve(StoryboardProvider.self)!
+            let navigationControllerProvider = resolver.resolve(NavigationControllerProvider.self)!
+            return AuthenticationVCStoryboardRouter(storyboardProvider: storyboardProvider, navigationControllerProvider: navigationControllerProvider)
         }
         
         defaultContainer.register(FieldValidating.self) { _ in

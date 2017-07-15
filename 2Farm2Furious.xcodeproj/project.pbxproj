@@ -24,6 +24,10 @@
 		B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */; };
 		B9FAB1381F1A91B700530B6F /* StandardFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1371F1A91B700530B6F /* StandardFieldValidator.swift */; };
 		B9FAB13A1F1A921A00530B6F /* FieldValidating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1391F1A921A00530B6F /* FieldValidating.swift */; };
+		B9FAB1411F1AADC000530B6F /* StoryboardProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1401F1AADC000530B6F /* StoryboardProvider.swift */; };
+		B9FAB1441F1AAF3B00530B6F /* AuthenticationVCRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */; };
+		B9FAB1461F1AAF7200530B6F /* AuthenticatingVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */; };
+		B9FAB1481F1AB0E800530B6F /* NavigationControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */; };
 		D240F6699428E9CC23573524 /* Pods_2Farm2Furious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC46821A8484405DC931E1C /* Pods_2Farm2Furious.framework */; };
 		DB7F2F16DF044952B9C8015D /* Pods_2Farm2FuriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */; };
 /* End PBXBuildFile section */
@@ -64,6 +68,10 @@
 		B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+2Farm2Furious.swift"; sourceTree = "<group>"; };
 		B9FAB1371F1A91B700530B6F /* StandardFieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardFieldValidator.swift; sourceTree = "<group>"; };
 		B9FAB1391F1A921A00530B6F /* FieldValidating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidating.swift; sourceTree = "<group>"; };
+		B9FAB1401F1AADC000530B6F /* StoryboardProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardProvider.swift; sourceTree = "<group>"; };
+		B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationVCRouting.swift; sourceTree = "<group>"; };
+		B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatingVCRouter.swift; sourceTree = "<group>"; };
+		B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerProvider.swift; sourceTree = "<group>"; };
 		DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2Farm2FuriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +127,7 @@
 		B9EBFF411F15FAEC00F2EF58 /* 2Farm2Furious */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAB1421F1AAF2C00530B6F /* Routers */,
 				B9FAB1331F1A061E00530B6F /* DI */,
 				B9FAB1301F1A049200530B6F /* Services */,
 				B9FAB12D1F19FC0E00530B6F /* Validators */,
@@ -167,6 +176,7 @@
 			children = (
 				B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */,
 				B9FAB1391F1A921A00530B6F /* FieldValidating.swift */,
+				B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -192,6 +202,8 @@
 			isa = PBXGroup;
 			children = (
 				B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */,
+				B9FAB1401F1AADC000530B6F /* StoryboardProvider.swift */,
+				B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */,
 			);
 			name = DI;
 			sourceTree = "<group>";
@@ -202,6 +214,14 @@
 				B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */,
 			);
 			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B9FAB1421F1AAF2C00530B6F /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */,
+			);
+			name = Routers;
 			sourceTree = "<group>";
 		};
 		BE5CEA26818A841A74FA939D /* Pods */ = {
@@ -420,14 +440,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9FAB1481F1AB0E800530B6F /* NavigationControllerProvider.swift in Sources */,
 				B9EBFF6A1F172DAB00F2EF58 /* LoginView.swift in Sources */,
 				B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */,
 				B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */,
 				B9FAB1381F1A91B700530B6F /* StandardFieldValidator.swift in Sources */,
+				B9FAB1411F1AADC000530B6F /* StoryboardProvider.swift in Sources */,
 				B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */,
 				B9EBFF431F15FAEC00F2EF58 /* AppDelegate.swift in Sources */,
 				B9FAB12F1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift in Sources */,
 				B9FAB13A1F1A921A00530B6F /* FieldValidating.swift in Sources */,
+				B9FAB1441F1AAF3B00530B6F /* AuthenticationVCRouting.swift in Sources */,
+				B9FAB1461F1AAF7200530B6F /* AuthenticatingVCRouter.swift in Sources */,
 				B9FAB12C1F19F6AD00530B6F /* AuthenticationKitchen.swift in Sources */,
 				B9FAB12A1F19F55F00530B6F /* AuthenticationKitchener.swift in Sources */,
 			);

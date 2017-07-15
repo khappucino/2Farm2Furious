@@ -8,11 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		B9EBFF431F15FAEC00F2EF58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF421F15FAEC00F2EF58 /* AppDelegate.swift */; };
-		B9EBFF451F15FAEC00F2EF58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF441F15FAEC00F2EF58 /* ViewController.swift */; };
+		B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */; };
 		B9EBFF481F15FAEC00F2EF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF461F15FAEC00F2EF58 /* Main.storyboard */; };
 		B9EBFF4A1F15FAEC00F2EF58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF491F15FAEC00F2EF58 /* Assets.xcassets */; };
 		B9EBFF4D1F15FAEC00F2EF58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF4B1F15FAEC00F2EF58 /* LaunchScreen.storyboard */; };
-		B9EBFF581F15FAEC00F2EF58 /* _Farm2FuriousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF571F15FAEC00F2EF58 /* _Farm2FuriousTests.swift */; };
+		B9EBFF641F1718CD00F2EF58 /* FancyTestFieldSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF631F1718CD00F2EF58 /* FancyTestFieldSpec.swift */; };
+		B9EBFF6A1F172DAB00F2EF58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF691F172DAB00F2EF58 /* LoginView.swift */; };
+		B9EBFF6B1F172DAB00F2EF58 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF691F172DAB00F2EF58 /* LoginView.swift */; };
+		B9EBFF6D1F172DBE00F2EF58 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF6C1F172DBE00F2EF58 /* LoginView.xib */; };
+		B9EBFF6E1F172DBE00F2EF58 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF6C1F172DBE00F2EF58 /* LoginView.xib */; };
+		B9FAB12A1F19F55F00530B6F /* AuthenticationKitchener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */; };
+		B9FAB12C1F19F6AD00530B6F /* AuthenticationKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */; };
+		B9FAB12F1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB12E1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift */; };
+		B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1311F1A04A600530B6F /* CoronaService.swift */; };
+		B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */; };
+		D240F6699428E9CC23573524 /* Pods_2Farm2Furious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC46821A8484405DC931E1C /* Pods_2Farm2Furious.framework */; };
+		DB7F2F16DF044952B9C8015D /* Pods_2Farm2FuriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,16 +37,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EC46821A8484405DC931E1C /* Pods_2Farm2Furious.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2Farm2Furious.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE1DBCA8D1129B977318C1C /* Pods-2Farm2Furious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Farm2Furious.release.xcconfig"; path = "Pods/Target Support Files/Pods-2Farm2Furious/Pods-2Farm2Furious.release.xcconfig"; sourceTree = "<group>"; };
+		6B13F3239DE1726418128CDE /* Pods-2Farm2FuriousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Farm2FuriousTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-2Farm2FuriousTests/Pods-2Farm2FuriousTests.release.xcconfig"; sourceTree = "<group>"; };
+		892606BA71AD5EB71A5BF8FD /* Pods-2Farm2Furious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Farm2Furious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-2Farm2Furious/Pods-2Farm2Furious.debug.xcconfig"; sourceTree = "<group>"; };
+		B97E448B4856B43AAB7B70E8 /* Pods-2Farm2FuriousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Farm2FuriousTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-2Farm2FuriousTests/Pods-2Farm2FuriousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9EBFF3F1F15FAEC00F2EF58 /* 2Farm2Furious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Farm2Furious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EBFF421F15FAEC00F2EF58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9EBFF441F15FAEC00F2EF58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewController.swift; sourceTree = "<group>"; };
 		B9EBFF471F15FAEC00F2EF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9EBFF491F15FAEC00F2EF58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9EBFF4C1F15FAEC00F2EF58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9EBFF4E1F15FAEC00F2EF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9EBFF531F15FAEC00F2EF58 /* 2Farm2FuriousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = 2Farm2FuriousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9EBFF571F15FAEC00F2EF58 /* _Farm2FuriousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Farm2FuriousTests.swift; sourceTree = "<group>"; };
 		B9EBFF591F15FAEC00F2EF58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9EBFF621F1718CD00F2EF58 /* 2Farm2FuriousTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "2Farm2FuriousTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		B9EBFF631F1718CD00F2EF58 /* FancyTestFieldSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyTestFieldSpec.swift; sourceTree = "<group>"; };
+		B9EBFF691F172DAB00F2EF58 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		B9EBFF6C1F172DBE00F2EF58 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchener.swift; sourceTree = "<group>"; };
+		B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchen.swift; sourceTree = "<group>"; };
+		B9FAB12E1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastAndTheFuriousCastValidator.swift; sourceTree = "<group>"; };
+		B9FAB1311F1A04A600530B6F /* CoronaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoronaService.swift; sourceTree = "<group>"; };
+		B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+2Farm2Furious.swift"; sourceTree = "<group>"; };
+		DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2Farm2FuriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D240F6699428E9CC23573524 /* Pods_2Farm2Furious.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,18 +76,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB7F2F16DF044952B9C8015D /* Pods_2Farm2FuriousTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7685064694B1F485015F2163 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EC46821A8484405DC931E1C /* Pods_2Farm2Furious.framework */,
+				DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9EBFF361F15FAEC00F2EF58 = {
 			isa = PBXGroup;
 			children = (
 				B9EBFF411F15FAEC00F2EF58 /* 2Farm2Furious */,
 				B9EBFF561F15FAEC00F2EF58 /* 2Farm2FuriousTests */,
 				B9EBFF401F15FAEC00F2EF58 /* Products */,
+				BE5CEA26818A841A74FA939D /* Pods */,
+				7685064694B1F485015F2163 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,8 +115,14 @@
 		B9EBFF411F15FAEC00F2EF58 /* 2Farm2Furious */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAB1331F1A061E00530B6F /* DI */,
+				B9FAB1301F1A049200530B6F /* Services */,
+				B9FAB12D1F19FC0E00530B6F /* Validators */,
+				B9FAB1281F19F4FB00530B6F /* Protocols */,
+				B9FAB1271F19F4EE00530B6F /* Kitchens */,
+				B9FAB1361F1A06DB00530B6F /* ViewControllers */,
+				B9EBFF651F17190900F2EF58 /* Views */,
 				B9EBFF421F15FAEC00F2EF58 /* AppDelegate.swift */,
-				B9EBFF441F15FAEC00F2EF58 /* ViewController.swift */,
 				B9EBFF461F15FAEC00F2EF58 /* Main.storyboard */,
 				B9EBFF491F15FAEC00F2EF58 /* Assets.xcassets */,
 				B9EBFF4B1F15FAEC00F2EF58 /* LaunchScreen.storyboard */,
@@ -90,10 +134,79 @@
 		B9EBFF561F15FAEC00F2EF58 /* 2Farm2FuriousTests */ = {
 			isa = PBXGroup;
 			children = (
-				B9EBFF571F15FAEC00F2EF58 /* _Farm2FuriousTests.swift */,
 				B9EBFF591F15FAEC00F2EF58 /* Info.plist */,
+				B9EBFF631F1718CD00F2EF58 /* FancyTestFieldSpec.swift */,
+				B9EBFF621F1718CD00F2EF58 /* 2Farm2FuriousTests-Bridging-Header.h */,
 			);
 			path = 2Farm2FuriousTests;
+			sourceTree = "<group>";
+		};
+		B9EBFF651F17190900F2EF58 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B9EBFF691F172DAB00F2EF58 /* LoginView.swift */,
+				B9EBFF6C1F172DBE00F2EF58 /* LoginView.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B9FAB1271F19F4EE00530B6F /* Kitchens */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */,
+			);
+			name = Kitchens;
+			sourceTree = "<group>";
+		};
+		B9FAB1281F19F4FB00530B6F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B9FAB12D1F19FC0E00530B6F /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB12E1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift */,
+			);
+			name = Validators;
+			sourceTree = "<group>";
+		};
+		B9FAB1301F1A049200530B6F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB1311F1A04A600530B6F /* CoronaService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		B9FAB1331F1A061E00530B6F /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */,
+			);
+			name = DI;
+			sourceTree = "<group>";
+		};
+		B9FAB1361F1A06DB00530B6F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE5CEA26818A841A74FA939D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				892606BA71AD5EB71A5BF8FD /* Pods-2Farm2Furious.debug.xcconfig */,
+				5DE1DBCA8D1129B977318C1C /* Pods-2Farm2Furious.release.xcconfig */,
+				B97E448B4856B43AAB7B70E8 /* Pods-2Farm2FuriousTests.debug.xcconfig */,
+				6B13F3239DE1726418128CDE /* Pods-2Farm2FuriousTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9EBFF5C1F15FAEC00F2EF58 /* Build configuration list for PBXNativeTarget "2Farm2Furious" */;
 			buildPhases = (
+				2823597C4D7321AE9C46B1AE /* [CP] Check Pods Manifest.lock */,
 				B9EBFF3B1F15FAEC00F2EF58 /* Sources */,
 				B9EBFF3C1F15FAEC00F2EF58 /* Frameworks */,
 				B9EBFF3D1F15FAEC00F2EF58 /* Resources */,
+				7442F593E5ADAD045A3598CD /* [CP] Embed Pods Frameworks */,
+				197A9A61EC754B023E91C63A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -120,9 +236,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9EBFF5F1F15FAEC00F2EF58 /* Build configuration list for PBXNativeTarget "2Farm2FuriousTests" */;
 			buildPhases = (
+				0AE21F3A48261AA78DAE58B9 /* [CP] Check Pods Manifest.lock */,
 				B9EBFF4F1F15FAEC00F2EF58 /* Sources */,
 				B9EBFF501F15FAEC00F2EF58 /* Frameworks */,
 				B9EBFF511F15FAEC00F2EF58 /* Resources */,
+				48142CFFEFAA7A43AA1A86BB /* [CP] Embed Pods Frameworks */,
+				E552655D9B67670B50DBE111 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -150,6 +269,7 @@
 					};
 					B9EBFF521F15FAEC00F2EF58 = {
 						CreatedOnToolsVersion = 8.3.3;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						TestTargetID = B9EBFF3E1F15FAEC00F2EF58;
 					};
@@ -179,6 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EBFF6D1F172DBE00F2EF58 /* LoginView.xib in Resources */,
 				B9EBFF4D1F15FAEC00F2EF58 /* LaunchScreen.storyboard in Resources */,
 				B9EBFF4A1F15FAEC00F2EF58 /* Assets.xcassets in Resources */,
 				B9EBFF481F15FAEC00F2EF58 /* Main.storyboard in Resources */,
@@ -189,18 +310,118 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9EBFF6E1F172DBE00F2EF58 /* LoginView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0AE21F3A48261AA78DAE58B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		197A9A61EC754B023E91C63A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-2Farm2Furious/Pods-2Farm2Furious-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2823597C4D7321AE9C46B1AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		48142CFFEFAA7A43AA1A86BB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-2Farm2FuriousTests/Pods-2Farm2FuriousTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7442F593E5ADAD045A3598CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-2Farm2Furious/Pods-2Farm2Furious-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E552655D9B67670B50DBE111 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-2Farm2FuriousTests/Pods-2Farm2FuriousTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9EBFF3B1F15FAEC00F2EF58 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EBFF451F15FAEC00F2EF58 /* ViewController.swift in Sources */,
+				B9EBFF6A1F172DAB00F2EF58 /* LoginView.swift in Sources */,
+				B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */,
+				B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */,
+				B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */,
 				B9EBFF431F15FAEC00F2EF58 /* AppDelegate.swift in Sources */,
+				B9FAB12F1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift in Sources */,
+				B9FAB12C1F19F6AD00530B6F /* AuthenticationKitchen.swift in Sources */,
+				B9FAB12A1F19F55F00530B6F /* AuthenticationKitchener.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +429,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9EBFF581F15FAEC00F2EF58 /* _Farm2FuriousTests.swift in Sources */,
+				B9EBFF6B1F172DAB00F2EF58 /* LoginView.swift in Sources */,
+				B9EBFF641F1718CD00F2EF58 /* FancyTestFieldSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +489,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -318,6 +541,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -339,6 +563,7 @@
 		};
 		B9EBFF5D1F15FAEC00F2EF58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892606BA71AD5EB71A5BF8FD /* Pods-2Farm2Furious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 2Farm2Furious/Info.plist;
@@ -351,6 +576,7 @@
 		};
 		B9EBFF5E1F15FAEC00F2EF58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DE1DBCA8D1129B977318C1C /* Pods-2Farm2Furious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = 2Farm2Furious/Info.plist;
@@ -363,13 +589,17 @@
 		};
 		B9EBFF601F15FAEC00F2EF58 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B97E448B4856B43AAB7B70E8 /* Pods-2Farm2FuriousTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = 2Farm2FuriousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-farm2furiousa.-Farm2FuriousTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "2Farm2FuriousTests/2Farm2FuriousTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2Farm2Furious.app/2Farm2Furious";
 			};
@@ -377,13 +607,16 @@
 		};
 		B9EBFF611F15FAEC00F2EF58 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B13F3239DE1726418128CDE /* Pods-2Farm2FuriousTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = 2Farm2FuriousTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-farm2furiousa.-Farm2FuriousTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "2Farm2FuriousTests/2Farm2FuriousTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/2Farm2Furious.app/2Farm2Furious";
 			};
@@ -408,6 +641,7 @@
 				B9EBFF5E1F15FAEC00F2EF58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9EBFF5F1F15FAEC00F2EF58 /* Build configuration list for PBXNativeTarget "2Farm2FuriousTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +650,7 @@
 				B9EBFF611F15FAEC00F2EF58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

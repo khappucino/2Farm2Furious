@@ -20,21 +20,25 @@ enum LoginViewEvent {
 }
 
 class AuthenticationViewController: UIViewController {
-    @IBOutlet weak var loginView: LoginView!
+    @IBOutlet weak var loginViewContainer: UIView!
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     private var authenticationKitchener: AuthenticationKitchener!
     private var router: AuthenticationVCRouting!
+    private var loginView: LoginView!
     
     private let disposeBag = DisposeBag()
     
-    internal func inject(authenticationKitchener: AuthenticationKitchener, router: AuthenticationVCRouting) {
+    internal func inject(authenticationKitchener: AuthenticationKitchener, router: AuthenticationVCRouting, loginView: LoginView) {
         self.authenticationKitchener = authenticationKitchener
         self.router = router
+        self.loginView = loginView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureViews()
 
         // the loginview could always emit different events,
         // we would just need to flatmap those events into the VC specific events
@@ -62,6 +66,16 @@ class AuthenticationViewController: UIViewController {
         
     }
     
+    
+    private func configureViews() {
+        loginViewContainer.addSubview(loginView)
+        
+        loginView.leadingAnchor.constraint(equalTo: loginViewContainer.leadingAnchor).isActive = true
+        loginView.trailingAnchor.constraint(equalTo: loginViewContainer.trailingAnchor).isActive = true
+        loginView.topAnchor.constraint(equalTo: loginViewContainer.topAnchor).isActive = true
+        loginView.bottomAnchor.constraint(equalTo: loginViewContainer.bottomAnchor).isActive = true
+
+    }
     
 }
 

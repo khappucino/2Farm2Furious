@@ -8,7 +8,8 @@ extension SwinjectStoryboard {
         defaultContainer.storyboardInitCompleted(AuthenticationViewController.self) { resolver, controller in
             let authenticationKitchener = resolver.resolve(AuthenticationKitchener.self)!
             let router = resolver.resolve(AuthenticationVCRouting.self)!
-            controller.inject(authenticationKitchener: authenticationKitchener, router: router)
+            let loginView = resolver.resolve(LoginView.self)!
+            controller.inject(authenticationKitchener: authenticationKitchener, router: router, loginView: loginView)
         }
         
         defaultContainer.register(StoryboardProvider.self) { _ in
@@ -23,6 +24,10 @@ extension SwinjectStoryboard {
             let storyboardProvider = resolver.resolve(StoryboardProvider.self)!
             let navigationControllerProvider = resolver.resolve(NavigationControllerProvider.self)!
             return AuthenticationVCStoryboardRouter(storyboardProvider: storyboardProvider, navigationControllerProvider: navigationControllerProvider)
+        }
+        
+        defaultContainer.register(LoginView.self) { _ in
+            return LoginView(frame: .zero)
         }
         
         defaultContainer.register(FieldValidating.self) { _ in

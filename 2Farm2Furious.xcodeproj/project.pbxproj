@@ -129,6 +129,7 @@
 		B9EBFF411F15FAEC00F2EF58 /* 2Farm2Furious */ = {
 			isa = PBXGroup;
 			children = (
+				B9FAB14B1F1AD6ED00530B6F /* Providers */,
 				B9FAB1421F1AAF2C00530B6F /* Routers */,
 				B9FAB1331F1A061E00530B6F /* DI */,
 				B9FAB1301F1A049200530B6F /* Services */,
@@ -204,8 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */,
-				B9FAB1401F1AADC000530B6F /* StoryboardProvider.swift */,
-				B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */,
 			);
 			name = DI;
 			sourceTree = "<group>";
@@ -225,6 +224,15 @@
 				B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */,
 			);
 			name = Routers;
+			sourceTree = "<group>";
+		};
+		B9FAB14B1F1AD6ED00530B6F /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				B9FAB1401F1AADC000530B6F /* StoryboardProvider.swift */,
+				B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */,
+			);
+			name = Providers;
 			sourceTree = "<group>";
 		};
 		BE5CEA26818A841A74FA939D /* Pods */ = {

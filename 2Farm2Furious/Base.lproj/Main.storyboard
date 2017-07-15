@@ -40,7 +40,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-Id-wKf" userLabel="LoginView" customClass="LoginView" customModule="_Farm2Furious" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EJ8-Id-wKf" userLabel="LoginViewContainer">
                                 <rect key="frame" x="26" y="108" width="323" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -63,7 +63,7 @@
                     <navigationItem key="navigationItem" id="Lx8-sp-Iah"/>
                     <connections>
                         <outlet property="loadingIndicator" destination="rnd-UX-89o" id="ojD-9P-iA6"/>
-                        <outlet property="loginView" destination="EJ8-Id-wKf" id="3Vx-15-QND"/>
+                        <outlet property="loginViewContainer" destination="EJ8-Id-wKf" id="e5j-GX-KLz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QYZ-jj-YBS" userLabel="First Responder" sceneMemberID="firstResponder"/>

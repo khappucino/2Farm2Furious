@@ -12,10 +12,18 @@ class LoginView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        commonSetup()
+    }
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonSetup()
+    }
+    
+    func commonSetup() {
         addNibView()
         translatesAutoresizingMaskIntoConstraints = false
         setupErrorReset()
-        
     }
     
     func validatedTextStream() -> Observable<LoginViewEvent> {

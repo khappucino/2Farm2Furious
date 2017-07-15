@@ -3,23 +3,6 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-enum LoginViewState {
-    case username(Bool)
-    case password(Bool)
-    case success(String)
-}
-
-enum LoginViewTextType {
-    case username(String)
-    case password(String)
-}
-
-enum LoginViewEvent {
-    case textChanged(LoginViewTextType)
-    case submitButtonPressed(LoginViewTextType, LoginViewTextType)
-}
-
-
 class LoginView: UIView {
     
     @IBOutlet weak var button: UIButton!

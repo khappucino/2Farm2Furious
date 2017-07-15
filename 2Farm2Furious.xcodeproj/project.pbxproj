@@ -28,6 +28,7 @@
 		B9FAB1441F1AAF3B00530B6F /* AuthenticationVCRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */; };
 		B9FAB1461F1AAF7200530B6F /* AuthenticatingVCRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */; };
 		B9FAB1481F1AB0E800530B6F /* NavigationControllerProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */; };
+		B9FAB14A1F1AB41600530B6F /* AllTheThingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1491F1AB41600530B6F /* AllTheThingsViewController.swift */; };
 		D240F6699428E9CC23573524 /* Pods_2Farm2Furious.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EC46821A8484405DC931E1C /* Pods_2Farm2Furious.framework */; };
 		DB7F2F16DF044952B9C8015D /* Pods_2Farm2FuriousTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +73,7 @@
 		B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationVCRouting.swift; sourceTree = "<group>"; };
 		B9FAB1451F1AAF7200530B6F /* AuthenticatingVCRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatingVCRouter.swift; sourceTree = "<group>"; };
 		B9FAB1471F1AB0E800530B6F /* NavigationControllerProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationControllerProvider.swift; sourceTree = "<group>"; };
+		B9FAB1491F1AB41600530B6F /* AllTheThingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllTheThingsViewController.swift; sourceTree = "<group>"; };
 		DD27D95016FB4199C3196391 /* Pods_2Farm2FuriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2Farm2FuriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -212,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */,
+				B9FAB1491F1AB41600530B6F /* AllTheThingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				B9EBFF6A1F172DAB00F2EF58 /* LoginView.swift in Sources */,
 				B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */,
 				B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */,
+				B9FAB14A1F1AB41600530B6F /* AllTheThingsViewController.swift in Sources */,
 				B9FAB1381F1A91B700530B6F /* StandardFieldValidator.swift in Sources */,
 				B9FAB1411F1AADC000530B6F /* StoryboardProvider.swift in Sources */,
 				B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */,

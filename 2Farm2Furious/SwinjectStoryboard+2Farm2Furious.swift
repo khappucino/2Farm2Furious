@@ -7,7 +7,8 @@ extension SwinjectStoryboard {
         
         defaultContainer.storyboardInitCompleted(AuthenticationViewController.self) { resolver, controller in
             let authenticationKitchener = resolver.resolve(AuthenticationKitchener.self)!
-            controller.inject(authenticationKitchener: authenticationKitchener)
+            let router = resolver.resolve(AuthenticationVCRouting.self)!
+            controller.inject(authenticationKitchener: authenticationKitchener, router: router)
         }
         
         defaultContainer.register(StoryboardProvider.self) { _ in

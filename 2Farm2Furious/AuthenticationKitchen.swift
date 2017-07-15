@@ -47,7 +47,9 @@ class AuthenticationKitchen: AuthenticationKitchener {
         if usernameSuccess && passwordSuccess {
             return coronaService.getCorona().flatMap { (corona) -> Observable<LoginViewState> in
                 Observable.just(LoginViewState.success(corona))
-            }
+                }
+                .startWith(.startedLoading)
+                .concat(Observable.just(.finishedLoading))
         }
         else {
             return Observable.just(.password(passwordSuccess))

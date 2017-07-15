@@ -1,5 +1,5 @@
 import Foundation
 
 protocol AuthenticationVCRouting {
-    func routeToBeer(title: String)
+    func routeToAllTheThings(title: String)
 }

@@ -15,6 +15,9 @@
 		B94662FE1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94662FD1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift */; };
 		B94663001F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94662FF1F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift */; };
 		B94663021F1B4ABC00C9BD26 /* FakeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */; };
+		B94663051F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663041F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift */; };
+		B94663071F1C1A9300C9BD26 /* FakeFieldValidating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */; };
+		B94663091F1C1AAE00C9BD26 /* FakeCoronaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */; };
 		B9EBFF431F15FAEC00F2EF58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF421F15FAEC00F2EF58 /* AppDelegate.swift */; };
 		B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EBFF441F15FAEC00F2EF58 /* AuthenticationViewController.swift */; };
 		B9EBFF481F15FAEC00F2EF58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9EBFF461F15FAEC00F2EF58 /* Main.storyboard */; };
@@ -60,6 +63,9 @@
 		B94662FD1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationKitchener.swift; sourceTree = "<group>"; };
 		B94662FF1F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeAuthenticationVCRouting.swift; sourceTree = "<group>"; };
 		B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeLoginView.swift; sourceTree = "<group>"; };
+		B94663041F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchenSpec.swift; sourceTree = "<group>"; };
+		B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFieldValidating.swift; sourceTree = "<group>"; };
+		B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCoronaService.swift; sourceTree = "<group>"; };
 		B97E448B4856B43AAB7B70E8 /* Pods-2Farm2FuriousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2Farm2FuriousTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-2Farm2FuriousTests/Pods-2Farm2FuriousTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9EBFF3F1F15FAEC00F2EF58 /* 2Farm2Furious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2Farm2Furious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EBFF421F15FAEC00F2EF58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +137,8 @@
 				B94662FD1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift */,
 				B94662FF1F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift */,
 				B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */,
+				B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */,
+				B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -141,6 +149,14 @@
 				B94662F51F1B04A600C9BD26 /* TestHelpers.swift */,
 			);
 			name = TestHelpers;
+			sourceTree = "<group>";
+		};
+		B94663031F1C19C900C9BD26 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				B94663041F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift */,
+			);
+			name = Tests;
 			sourceTree = "<group>";
 		};
 		B9EBFF361F15FAEC00F2EF58 = {
@@ -208,6 +224,7 @@
 		B9FAB1271F19F4EE00530B6F /* Kitchens */ = {
 			isa = PBXGroup;
 			children = (
+				B94663031F1C19C900C9BD26 /* Tests */,
 				B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */,
 			);
 			name = Kitchens;
@@ -523,8 +540,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94663051F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift in Sources */,
 				B94663001F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift in Sources */,
+				B94663071F1C1A9300C9BD26 /* FakeFieldValidating.swift in Sources */,
 				B94662FE1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift in Sources */,
+				B94663091F1C1AAE00C9BD26 /* FakeCoronaService.swift in Sources */,
 				B94662F01F1ADFC000C9BD26 /* LoginViewSpec.swift in Sources */,
 				B94663021F1B4ABC00C9BD26 /* FakeLoginView.swift in Sources */,
 				B94662F41F1B043500C9BD26 /* AuthenticationViewControllerSpecs.swift in Sources */,

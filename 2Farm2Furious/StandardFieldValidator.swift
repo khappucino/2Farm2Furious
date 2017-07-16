@@ -7,7 +7,7 @@ class StandardFieldValidator: FieldValidating {
     }
     
     func validatePassword(_ password: String) -> Bool {
-        let isValidChars = nil == password.rangeOfCharacter(from: NSCharacterSet.letters.inverted)
+        let isValidChars = nil == password.rangeOfCharacter(from: NSCharacterSet.alphanumerics.inverted)
         return isValidChars && password.characters.count > 0
     }
 }

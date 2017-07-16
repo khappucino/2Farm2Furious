@@ -20,6 +20,9 @@ enum LoginViewEvent {
 }
 
 class AuthenticationViewController: UIViewController {
+    
+    public static let ID = "AuthenticationViewController"
+    
     @IBOutlet weak var loginViewContainer: UIView!
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
@@ -42,7 +45,6 @@ class AuthenticationViewController: UIViewController {
 
         // the loginview could always emit different events,
         // we would just need to flatmap those events into the VC specific events
-        // for sake of
         authenticationKitchener.bindTo(events: loginView.validatedTextStream())
             .subscribe(onNext: { [weak self] (loginViewState) in
                 self?.updateState(loginViewState)

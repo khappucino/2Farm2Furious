@@ -31,7 +31,7 @@
         <!--Authentication View Controller-->
         <scene sceneID="iqT-u2-Gzy">
             <objects>
-                <viewController id="Sb6-X1-kAC" customClass="AuthenticationViewController" customModule="_Farm2Furious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuthenticationViewController" id="Sb6-X1-kAC" customClass="AuthenticationViewController" customModule="_Farm2Furious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yOh-8t-ce8"/>
                         <viewControllerLayoutGuide type="bottom" id="Jid-mn-Dkm"/>

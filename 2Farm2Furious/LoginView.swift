@@ -20,7 +20,7 @@ class LoginView: UIView {
         commonSetup()
     }
     
-    func commonSetup() {
+    internal func commonSetup() {
         addNibView()
         translatesAutoresizingMaskIntoConstraints = false
         setupErrorReset()

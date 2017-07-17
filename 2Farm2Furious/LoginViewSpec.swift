@@ -33,6 +33,7 @@ class LoginViewSpec: KIFSpec {
             describe("username text field") {
                 context("when we enter text into the username textfield ") {
                     beforeEach {
+                        outputEvents = [LoginViewEvent]()
                         viewTester().usingIdentifier(LoginView.usernameTextfieldID).enterText("xyz")
                     }
                     
@@ -48,21 +49,24 @@ class LoginViewSpec: KIFSpec {
                 context("when we leave the textfield") {
                     context("when the textfield still has stuff in it") {
                         beforeEach {
+                            outputEvents = [LoginViewEvent]()
                             viewTester().usingIdentifier(LoginView.usernameTextfieldID).enterText("x")
                             subject.usernameTextField.resignFirstResponder()
                         }
                         
                         it("should emit a LoginViewEvent") {
                             let expectedEvents: [LoginViewEvent] = [.textChanged(.username("x")), // entering text
-                                .textChanged(.username("x")), // fires on exit
-                                .textChanged(.username("x"))] // fires on exit
+                                                                    .textChanged(.username("x")), // fires on exit
+                                                                    .textChanged(.username("x"))] // fires on exit
                             let isValid = expectedEvents == outputEvents
+                            print(outputEvents)
                             expect(isValid).to(beTrue())
                         }
                     }
                     
                     context("when the textfield is empty when we end editing") {
                         beforeEach {
+                            outputEvents = [LoginViewEvent]()
                             viewTester().usingIdentifier(LoginView.usernameTextfieldID).enterText("")
                             subject.usernameTextField.resignFirstResponder()
                         }

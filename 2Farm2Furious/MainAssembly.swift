@@ -47,8 +47,8 @@ class MainAssembly: Assembly {
         
         container.register(AuthenticationKitchener.self) { resolver in
             let fnfValidator = resolver.resolve(FieldValidating.self)!
-            let coronaService = resolver.resolve(CoronaDomainModelServicing.self)!
-            return AuthenticationKitchen(fieldValidating: fnfValidator, coronaService: coronaService)
+            let randomQueryService = resolver.resolve(RandomQueryDomainModelServicing.self)!
+            return AuthenticationKitchen(fieldValidating: fnfValidator, randomQueryService: randomQueryService)
         }
         
         container.register(QuestionsKitchener.self) { resolver in
@@ -60,8 +60,8 @@ class MainAssembly: Assembly {
             return QuestionsService()
         }
         
-        container.register(CoronaDomainModelServicing.self) { _ in
-            return CoronaService()
+        container.register(RandomQueryDomainModelServicing.self) { _ in
+            return RandomQueryService()
         }
         
     }

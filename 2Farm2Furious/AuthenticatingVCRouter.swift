@@ -9,9 +9,11 @@ class AuthenticationVCStoryboardRouter: AuthenticationVCRouting {
         self.navigationControllerProvider = navigationControllerProvider
     }
     
-    func routeToAllTheThings(title: String) {
+    func routeToQuestionsWithQuery(_ query: String) {
         let storyboardToInflateFrom = self.storyboardProvider.storyBoard
-        let questionsViewController = storyboardToInflateFrom.instantiateViewController(withIdentifier: QuestionsViewController.ID)
+        let questionsViewController = storyboardToInflateFrom.instantiateViewController(withIdentifier: QuestionsViewController.ID) as! QuestionsViewController
+        questionsViewController.configure(query: query)
+        
         if let navigationController = self.navigationControllerProvider.getNavigationController() {
             navigationController.pushViewController(questionsViewController, animated: true)
         }

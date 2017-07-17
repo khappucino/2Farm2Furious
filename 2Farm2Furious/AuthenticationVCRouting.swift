@@ -1,5 +1,5 @@
 import Foundation
 
 protocol AuthenticationVCRouting {
-    func routeToAllTheThings(title: String)
+    func routeToQuestionsWithQuery(_ query: String)
 }

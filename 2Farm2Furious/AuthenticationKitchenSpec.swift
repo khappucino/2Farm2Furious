@@ -12,7 +12,7 @@ class AuthenticationKitchenSpec: QuickSpec {
         describe("AuthenticationKitchen") {
             var subject: AuthenticationKitchen!
             var fakeFieldValidating: FakeFieldValidating!
-            var fakeCoronaService: FakeCoronaService!
+            var fakeRandomQueryService: FakeRandomQueryServicing!
             var inputEventSource: PublishSubject<LoginViewEvent>!
             var outputEvents: [LoginViewState]!
             let disposeBag = DisposeBag()
@@ -21,11 +21,11 @@ class AuthenticationKitchenSpec: QuickSpec {
                 outputEvents = [LoginViewState]()
                 
                 fakeFieldValidating = FakeFieldValidating()
-                fakeCoronaService = FakeCoronaService()
+                fakeRandomQueryService = FakeRandomQueryServicing()
                 
                 inputEventSource = PublishSubject<LoginViewEvent>()
                 
-                subject = AuthenticationKitchen(fieldValidating: fakeFieldValidating, coronaService: fakeCoronaService)
+                subject = AuthenticationKitchen(fieldValidating: fakeFieldValidating, randomQueryService: fakeRandomQueryService)
                 
                 subject.bindTo(events: inputEventSource.asObservable()).subscribe(onNext: { (outputViewState) in
                     outputEvents.append(outputViewState)
@@ -64,7 +64,7 @@ class AuthenticationKitchenSpec: QuickSpec {
                         beforeEach {
                             fakeFieldValidating.stubbedUsernameResult = true
                             fakeFieldValidating.stubbedPasswordResult = true
-                            fakeCoronaService.stubbedReturn = "water"
+                            fakeRandomQueryService.stubbedReturn = "water"
                             inputEventSource.onNext(.submitButtonPressed(.username("goodstuff"), .password("moregoodstuff")))
                         }
                         

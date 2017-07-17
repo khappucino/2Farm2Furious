@@ -17,9 +17,9 @@
 		B94663021F1B4ABC00C9BD26 /* FakeLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */; };
 		B94663051F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663041F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift */; };
 		B94663071F1C1A9300C9BD26 /* FakeFieldValidating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */; };
-		B94663091F1C1AAE00C9BD26 /* FakeCoronaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */; };
-		B94663191F1C77D000C9BD26 /* CoronaDomainModelServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663181F1C77D000C9BD26 /* CoronaDomainModelServicing.swift */; };
-		B946631C1F1C780600C9BD26 /* CoronaBeer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946631B1F1C780600C9BD26 /* CoronaBeer.swift */; };
+		B94663091F1C1AAE00C9BD26 /* FakeRandomQueryServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663081F1C1AAE00C9BD26 /* FakeRandomQueryServicing.swift */; };
+		B94663191F1C77D000C9BD26 /* RandomQueryDomainModelServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663181F1C77D000C9BD26 /* RandomQueryDomainModelServicing.swift */; };
+		B946631C1F1C780600C9BD26 /* RandomQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946631B1F1C780600C9BD26 /* RandomQuery.swift */; };
 		B946631E1F1C86D800C9BD26 /* QuestionsKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946631D1F1C86D800C9BD26 /* QuestionsKitchen.swift */; };
 		B94663201F1C86EE00C9BD26 /* QuestionsKitchener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B946631F1F1C86EE00C9BD26 /* QuestionsKitchener.swift */; };
 		B94663221F1C898700C9BD26 /* QuestionsDomainModelServicing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94663211F1C898700C9BD26 /* QuestionsDomainModelServicing.swift */; };
@@ -35,7 +35,7 @@
 		B9FAB12A1F19F55F00530B6F /* AuthenticationKitchener.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */; };
 		B9FAB12C1F19F6AD00530B6F /* AuthenticationKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */; };
 		B9FAB12F1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB12E1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift */; };
-		B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1311F1A04A600530B6F /* CoronaService.swift */; };
+		B9FAB1321F1A04A600530B6F /* RandomQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1311F1A04A600530B6F /* RandomQueryService.swift */; };
 		B9FAB1351F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */; };
 		B9FAB1381F1A91B700530B6F /* StandardFieldValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1371F1A91B700530B6F /* StandardFieldValidator.swift */; };
 		B9FAB13A1F1A921A00530B6F /* FieldValidating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9FAB1391F1A921A00530B6F /* FieldValidating.swift */; };
@@ -72,9 +72,9 @@
 		B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeLoginView.swift; sourceTree = "<group>"; };
 		B94663041F1C19FC00C9BD26 /* AuthenticationKitchenSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchenSpec.swift; sourceTree = "<group>"; };
 		B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeFieldValidating.swift; sourceTree = "<group>"; };
-		B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeCoronaService.swift; sourceTree = "<group>"; };
-		B94663181F1C77D000C9BD26 /* CoronaDomainModelServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoronaDomainModelServicing.swift; sourceTree = "<group>"; };
-		B946631B1F1C780600C9BD26 /* CoronaBeer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoronaBeer.swift; sourceTree = "<group>"; };
+		B94663081F1C1AAE00C9BD26 /* FakeRandomQueryServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeRandomQueryServicing.swift; sourceTree = "<group>"; };
+		B94663181F1C77D000C9BD26 /* RandomQueryDomainModelServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQueryDomainModelServicing.swift; sourceTree = "<group>"; };
+		B946631B1F1C780600C9BD26 /* RandomQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQuery.swift; sourceTree = "<group>"; };
 		B946631D1F1C86D800C9BD26 /* QuestionsKitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsKitchen.swift; sourceTree = "<group>"; };
 		B946631F1F1C86EE00C9BD26 /* QuestionsKitchener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsKitchener.swift; sourceTree = "<group>"; };
 		B94663211F1C898700C9BD26 /* QuestionsDomainModelServicing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionsDomainModelServicing.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 		B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchener.swift; sourceTree = "<group>"; };
 		B9FAB12B1F19F6AD00530B6F /* AuthenticationKitchen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationKitchen.swift; sourceTree = "<group>"; };
 		B9FAB12E1F19FC6800530B6F /* FastAndTheFuriousCastValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FastAndTheFuriousCastValidator.swift; sourceTree = "<group>"; };
-		B9FAB1311F1A04A600530B6F /* CoronaService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoronaService.swift; sourceTree = "<group>"; };
+		B9FAB1311F1A04A600530B6F /* RandomQueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomQueryService.swift; sourceTree = "<group>"; };
 		B9FAB1341F1A06AC00530B6F /* SwinjectStoryboard+2Farm2Furious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SwinjectStoryboard+2Farm2Furious.swift"; sourceTree = "<group>"; };
 		B9FAB1371F1A91B700530B6F /* StandardFieldValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StandardFieldValidator.swift; sourceTree = "<group>"; };
 		B9FAB1391F1A921A00530B6F /* FieldValidating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldValidating.swift; sourceTree = "<group>"; };
@@ -152,7 +152,7 @@
 				B94662FF1F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift */,
 				B94663011F1B4ABC00C9BD26 /* FakeLoginView.swift */,
 				B94663061F1C1A9300C9BD26 /* FakeFieldValidating.swift */,
-				B94663081F1C1AAE00C9BD26 /* FakeCoronaService.swift */,
+				B94663081F1C1AAE00C9BD26 /* FakeRandomQueryServicing.swift */,
 			);
 			name = Fakes;
 			sourceTree = "<group>";
@@ -176,7 +176,7 @@
 		B946631A1F1C77E500C9BD26 /* DomainModels */ = {
 			isa = PBXGroup;
 			children = (
-				B946631B1F1C780600C9BD26 /* CoronaBeer.swift */,
+				B946631B1F1C780600C9BD26 /* RandomQuery.swift */,
 				B94663251F1C8F1600C9BD26 /* Questions.swift */,
 			);
 			name = DomainModels;
@@ -261,7 +261,7 @@
 				B9FAB1291F19F55F00530B6F /* AuthenticationKitchener.swift */,
 				B9FAB1391F1A921A00530B6F /* FieldValidating.swift */,
 				B9FAB1431F1AAF3B00530B6F /* AuthenticationVCRouting.swift */,
-				B94663181F1C77D000C9BD26 /* CoronaDomainModelServicing.swift */,
+				B94663181F1C77D000C9BD26 /* RandomQueryDomainModelServicing.swift */,
 				B946631F1F1C86EE00C9BD26 /* QuestionsKitchener.swift */,
 				B94663211F1C898700C9BD26 /* QuestionsDomainModelServicing.swift */,
 			);
@@ -280,7 +280,7 @@
 		B9FAB1301F1A049200530B6F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B9FAB1311F1A04A600530B6F /* CoronaService.swift */,
+				B9FAB1311F1A04A600530B6F /* RandomQueryService.swift */,
 				B94663231F1C89B200C9BD26 /* QuestionsService.swift */,
 			);
 			name = Services;
@@ -547,7 +547,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9FAB1481F1AB0E800530B6F /* NavigationControllerProvider.swift in Sources */,
-				B9FAB1321F1A04A600530B6F /* CoronaService.swift in Sources */,
+				B9FAB1321F1A04A600530B6F /* RandomQueryService.swift in Sources */,
 				B94662F81F1B063E00C9BD26 /* MainAssembly.swift in Sources */,
 				B9EBFF451F15FAEC00F2EF58 /* AuthenticationViewController.swift in Sources */,
 				B94662F11F1AE14100C9BD26 /* LoginView.swift in Sources */,
@@ -563,12 +563,12 @@
 				B9FAB1441F1AAF3B00530B6F /* AuthenticationVCRouting.swift in Sources */,
 				B94663241F1C89B200C9BD26 /* QuestionsService.swift in Sources */,
 				B94663201F1C86EE00C9BD26 /* QuestionsKitchener.swift in Sources */,
-				B94663191F1C77D000C9BD26 /* CoronaDomainModelServicing.swift in Sources */,
+				B94663191F1C77D000C9BD26 /* RandomQueryDomainModelServicing.swift in Sources */,
 				B94663261F1C8F1600C9BD26 /* Questions.swift in Sources */,
 				B9FAB1461F1AAF7200530B6F /* AuthenticatingVCRouter.swift in Sources */,
 				B9FAB12C1F19F6AD00530B6F /* AuthenticationKitchen.swift in Sources */,
 				B9FAB12A1F19F55F00530B6F /* AuthenticationKitchener.swift in Sources */,
-				B946631C1F1C780600C9BD26 /* CoronaBeer.swift in Sources */,
+				B946631C1F1C780600C9BD26 /* RandomQuery.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,7 +580,7 @@
 				B94663001F1B4A6000C9BD26 /* FakeAuthenticationVCRouting.swift in Sources */,
 				B94663071F1C1A9300C9BD26 /* FakeFieldValidating.swift in Sources */,
 				B94662FE1F1B467600C9BD26 /* FakeAuthenticationKitchener.swift in Sources */,
-				B94663091F1C1AAE00C9BD26 /* FakeCoronaService.swift in Sources */,
+				B94663091F1C1AAE00C9BD26 /* FakeRandomQueryServicing.swift in Sources */,
 				B94662F01F1ADFC000C9BD26 /* LoginViewSpec.swift in Sources */,
 				B94663021F1B4ABC00C9BD26 /* FakeLoginView.swift in Sources */,
 				B94662F41F1B043500C9BD26 /* AuthenticationViewControllerSpecs.swift in Sources */,

@@ -4,11 +4,11 @@ import RxSwift
 class AuthenticationKitchen: AuthenticationKitchener {
     
     private let fieldValidating: FieldValidating
-    private let coronaService: CoronaDomainModelServicing
+    private let randomQueryService: RandomQueryDomainModelServicing
     
-    init(fieldValidating: FieldValidating, coronaService: CoronaDomainModelServicing) {
+    init(fieldValidating: FieldValidating, randomQueryService: RandomQueryDomainModelServicing) {
         self.fieldValidating = fieldValidating
-        self.coronaService = coronaService
+        self.randomQueryService = randomQueryService
     }
     
     func bindTo(events: Observable<LoginViewEvent>) -> Observable<LoginViewState> {
@@ -36,17 +36,22 @@ class AuthenticationKitchen: AuthenticationKitchener {
     private func validateOnSubmit(_ usernameTextType: LoginViewTextType, _ passwordTextType: LoginViewTextType) -> Observable<LoginViewState> {
         var usernameSuccess = false
         var passwordSuccess = false
+        var usernameText = ""
+        var passwordText = ""
         if case let LoginViewTextType.username(value) = usernameTextType {
             usernameSuccess = fieldValidating.validateUsername(value)
+            usernameText = value
         }
         
         if case let LoginViewTextType.password(value) = passwordTextType {
             passwordSuccess = fieldValidating.validatePassword(value)
+            passwordText = value
         }
         
         if usernameSuccess && passwordSuccess {
-            return coronaService.getCorona().flatMap { (corona) -> Observable<LoginViewState> in
-                Observable.just(LoginViewState.success(corona.ingredients))
+            let combinedSeedValue = usernameText + "," + passwordText + ","
+            return randomQueryService.getRandomQuery(seedValue: combinedSeedValue).flatMap { (randomQuery) -> Observable<LoginViewState> in
+                Observable.just(LoginViewState.success(randomQuery.queryString))
                 }
                 .startWith(.startedLoading)
                 .concat(Observable.just(.finishedLoading))

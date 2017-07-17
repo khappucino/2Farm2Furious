@@ -83,7 +83,7 @@ class AuthenticationViewControllerSpecs: QuickSpec {
                         fakeKitchen.pumpVCState(vcState: .success("cow"))
                     }
                     it("should have made the loading indicator visible") {
-                        expect(fakeRouter.recordedTitle).to(equal("cow"))
+                        expect(fakeRouter.recordedQuery).to(equal("cow"))
                     }
                 }
                 

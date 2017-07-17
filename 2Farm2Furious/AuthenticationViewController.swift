@@ -43,7 +43,7 @@ class AuthenticationViewController: UIViewController {
         case .finishedLoading:
             loadingIndicator.isHidden = true
         case .success(let value):
-            router.routeToAllTheThings(title: value)
+            router.routeToQuestionsWithQuery(value)
         default:
             loginView.updateState(textFieldState: state)
         }

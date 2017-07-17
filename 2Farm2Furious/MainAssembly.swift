@@ -14,8 +14,9 @@ class MainAssembly: Assembly {
             controller.inject(authenticationKitchener: authenticationKitchener, router: router, loginView: loginView)
         }
         
-        container.storyboardInitCompleted(AllTheThingsViewController.self) { _,_ in
-            
+        container.storyboardInitCompleted(QuestionsViewController.self) { resolver, controller in
+            let questionsKitchener = resolver.resolve(QuestionsKitchener.self)!
+            controller.inject(kitchen: questionsKitchener)
         }
         
         container.storyboardInitCompleted(UINavigationController.self) { _,_ in
@@ -50,10 +51,18 @@ class MainAssembly: Assembly {
             return AuthenticationKitchen(fieldValidating: fnfValidator, coronaService: coronaService)
         }
         
+        container.register(QuestionsKitchener.self) { resolver in
+            let questionsService = resolver.resolve(QuestionsDomainModelServicing.self)!
+            return QuestionsKitchen(questionsDomainService: questionsService)
+        }
+        
+        container.register(QuestionsDomainModelServicing.self) { resolver in
+            return QuestionsService()
+        }
+        
         container.register(CoronaDomainModelServicing.self) { _ in
             return CoronaService()
         }
         
-
     }
 }

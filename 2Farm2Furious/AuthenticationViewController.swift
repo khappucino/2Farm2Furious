@@ -1,24 +1,6 @@
 import UIKit
 import RxSwift
 
-enum LoginViewState {
-    case username(Bool)
-    case password(Bool)
-    case success(String)
-    case startedLoading
-    case finishedLoading
-}
-
-enum LoginViewTextType {
-    case username(String)
-    case password(String)
-}
-
-enum LoginViewEvent {
-    case textChanged(LoginViewTextType)
-    case submitButtonPressed(LoginViewTextType, LoginViewTextType)
-}
-
 class AuthenticationViewController: UIViewController {
     
     public static let ID = "AuthenticationViewController"

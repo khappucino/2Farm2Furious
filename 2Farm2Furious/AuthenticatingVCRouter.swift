@@ -11,9 +11,9 @@ class AuthenticationVCStoryboardRouter: AuthenticationVCRouting {
     
     func routeToAllTheThings(title: String) {
         let storyboardToInflateFrom = self.storyboardProvider.storyBoard
-        let allTheThingsViewController = storyboardToInflateFrom.instantiateViewController(withIdentifier: AllTheThingsViewController.ID)
+        let questionsViewController = storyboardToInflateFrom.instantiateViewController(withIdentifier: QuestionsViewController.ID)
         if let navigationController = self.navigationControllerProvider.getNavigationController() {
-            navigationController.pushViewController(allTheThingsViewController, animated: true)
+            navigationController.pushViewController(questionsViewController, animated: true)
         }
     }
 }

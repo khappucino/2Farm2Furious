@@ -7,9 +7,9 @@ class RandomQueryService: RandomQueryDomainModelServicing {
     fileprivate let haskellService = HaskellService()
     
     func getRandomQuery(seedValue: String) -> Observable<RandomQuery> {
-        let javaObs: Observable<String> = javaService.getWaterIngredient()
-        let swiftObs: Observable<String> = swiftService.getBarleyMaltIngredient()
-        let haskellObs: Observable<String> = haskellService.getYeast()
+        let javaObs: Observable<String> = javaService.getJava()
+        let swiftObs: Observable<String> = swiftService.getSwift()
+        let haskellObs: Observable<String> = haskellService.getHaskell()
         
         let hashValue = seedValue.hashValue
         let randomIndex = hashValue % 3
@@ -32,19 +32,19 @@ class RandomQueryService: RandomQueryDomainModelServicing {
 }
 
 fileprivate class JavaService {
-    func getWaterIngredient() -> Observable<String> {
-        return Observable.just("water")
+    func getJava() -> Observable<String> {
+        return Observable.just("java")
     }
 }
 
 fileprivate class SwiftService {
-    func getBarleyMaltIngredient() -> Observable<String> {
-        return Observable.just("barleyMalt")
+    func getSwift() -> Observable<String> {
+        return Observable.just("swift")
     }
 }
 
 fileprivate class HaskellService {
-    func getYeast() -> Observable<String> {
-        return Observable.just("yeast")
+    func getHaskell() -> Observable<String> {
+        return Observable.just("haskell")
     }
 }

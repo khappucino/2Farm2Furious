@@ -15,6 +15,20 @@ func applyMainAssemblyToContainer(container: Container) {
     mainAssembly.assemble(container: container)
 }
 
+func attachViewToScreen(window: UIWindow, viewToBeAttached: UIView) {
+    let vc = UIViewController()
+    vc.view.frame = CGRect(x: 0, y: 0, width: 1000, height: 1000)
+    vc.view.addSubview(viewToBeAttached)
+    
+    viewToBeAttached.leadingAnchor.constraint(equalTo: vc.view.leadingAnchor).isActive = true
+    viewToBeAttached.trailingAnchor.constraint(equalTo: vc.view.trailingAnchor).isActive = true
+    viewToBeAttached.topAnchor.constraint(equalTo: vc.view.topAnchor).isActive = true
+    viewToBeAttached.bottomAnchor.constraint(equalTo: vc.view.bottomAnchor).isActive = true
+    
+    window.rootViewController = nil
+    window.rootViewController = vc
+}
+
 extension LoginViewTextType: Equatable {
     public static func == (lhs: LoginViewTextType, rhs: LoginViewTextType) -> Bool {
         switch (lhs, rhs) {
@@ -59,3 +73,8 @@ extension LoginViewState: Equatable {
         }
     }
 }
+
+
+
+
+

@@ -18,5 +18,6 @@ pod 'Swinject', '~> 2.0.0'
 pod 'SwinjectStoryboard', '~> 1.0.0'
 pod 'Quick'
 pod 'Nimble'
+pod 'KIF-Quick'
 end
 

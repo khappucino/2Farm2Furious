@@ -5,6 +5,10 @@ import RxCocoa
 
 class LoginView: UIView {
     
+    public static let usernameTextfieldID = "username"
+    public static let passwordTextfieldID = "password"
+    public static let submitButtonID = "submit"
+    
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -24,6 +28,7 @@ class LoginView: UIView {
         addNibView()
         translatesAutoresizingMaskIntoConstraints = false
         setupErrorReset()
+        configureAccessibilityIDs()
     }
     
     func validatedTextStream() -> Observable<LoginViewEvent> {
@@ -47,6 +52,12 @@ class LoginView: UIView {
         default:
             break
         }
+    }
+    
+    private func configureAccessibilityIDs() {
+        usernameTextField.accessibilityIdentifier = LoginView.usernameTextfieldID
+        passwordTextField.accessibilityIdentifier = LoginView.passwordTextfieldID
+        button.accessibilityIdentifier = LoginView.submitButtonID
     }
     
     private func addNibView() {

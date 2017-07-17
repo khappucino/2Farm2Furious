@@ -38,6 +38,16 @@
                ReferencedContainer = "container:2Farm2Furious.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "B946630D1F1C456600C9BD26"
+               BuildableName = "2Farm2FuriousUITests.xctest"
+               BlueprintName = "2Farm2FuriousUITests"
+               ReferencedContainer = "container:2Farm2Furious.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

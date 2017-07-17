@@ -52,8 +52,8 @@ class AuthenticationKitchen: AuthenticationKitchener {
                 .concat(Observable.just(.finishedLoading))
         }
         else {
-            return Observable.just(.password(passwordSuccess))
-                             .startWith(.username(usernameSuccess))
+            return Observable.just(.username(usernameSuccess))
+                             .concat(Observable.just(.password(passwordSuccess)))
         }
         
     }

@@ -1,4 +1,10 @@
 PODS:
+  - KIF (3.5.2):
+    - KIF/Core (= 3.5.2)
+  - KIF-Quick (1.1.0):
+    - KIF (~> 3.0)
+    - Quick (~> 1.0)
+  - KIF/Core (3.5.2)
   - Nimble (7.0.1)
   - Quick (1.1.0)
   - RxCocoa (3.5.0):
@@ -11,6 +17,7 @@ PODS:
     - Swinject (= 2.0.0)
 
 DEPENDENCIES:
+  - KIF-Quick
   - Nimble
   - Quick
   - RxCocoa (~> 3.0)
@@ -20,6 +27,8 @@ DEPENDENCIES:
   - SwinjectStoryboard (~> 1.0.0)
 
 SPEC CHECKSUMS:
+  KIF: f2a6025bb3f11692df675054a134d43a9ec2d7db
+  KIF-Quick: da968bbfad615fd96c0d5eb4d8fd484ecdc26814
   Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   RxCocoa: a0a09f45d0e5b48ecb6a4a7b4b4c89c88d3f633f
@@ -28,6 +37,6 @@ SPEC CHECKSUMS:
   Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   SwinjectStoryboard: 8e0d3c0202b64172bdf915d55e8dc83d9c4e7863
 
-PODFILE CHECKSUM: f7c4dd7ab01ebcbb23ed356b293d9dffc67906fb
+PODFILE CHECKSUM: b9062f5cb89e8d0d11bedf41fa0c621a1b47b720
 
 COCOAPODS: 1.2.1

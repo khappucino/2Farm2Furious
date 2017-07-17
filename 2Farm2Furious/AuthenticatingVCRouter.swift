@@ -1,5 +1,4 @@
 import Foundation
-import SwinjectStoryboard
 
 class AuthenticationVCStoryboardRouter: AuthenticationVCRouting {
     let storyboardProvider: StoryboardProvider

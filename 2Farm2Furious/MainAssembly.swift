@@ -14,6 +14,14 @@ class MainAssembly: Assembly {
             controller.inject(authenticationKitchener: authenticationKitchener, router: router, loginView: loginView)
         }
         
+        container.storyboardInitCompleted(AllTheThingsViewController.self) { _,_ in
+            
+        }
+        
+        container.storyboardInitCompleted(UINavigationController.self) { _,_ in
+            
+        }
+        
         container.register(StoryboardProvider.self) { _ in
             return StoryboardProvider()
             }.inObjectScope(.container)
@@ -38,11 +46,11 @@ class MainAssembly: Assembly {
         
         container.register(AuthenticationKitchener.self) { resolver in
             let fnfValidator = resolver.resolve(FieldValidating.self)!
-            let coronaService = resolver.resolve(CoronaService.self)!
+            let coronaService = resolver.resolve(CoronaDomainModelServicing.self)!
             return AuthenticationKitchen(fieldValidating: fnfValidator, coronaService: coronaService)
         }
         
-        container.register(CoronaService.self) { _ in
+        container.register(CoronaDomainModelServicing.self) { _ in
             return CoronaService()
         }
         

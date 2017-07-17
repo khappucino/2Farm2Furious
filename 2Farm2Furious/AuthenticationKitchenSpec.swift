@@ -64,12 +64,12 @@ class AuthenticationKitchenSpec: QuickSpec {
                         beforeEach {
                             fakeFieldValidating.stubbedUsernameResult = true
                             fakeFieldValidating.stubbedPasswordResult = true
-                            fakeCoronaService.stubbedReturn = "FakeCorona"
+                            fakeCoronaService.stubbedReturn = "water"
                             inputEventSource.onNext(.submitButtonPressed(.username("goodstuff"), .password("moregoodstuff")))
                         }
                         
                         it("should have output a startedLoading, followed by a success() state followed by a finishedLoading state") {
-                            let expectedOutput: [LoginViewState] = [.startedLoading, .success("FakeCorona"), .finishedLoading]
+                            let expectedOutput: [LoginViewState] = [.startedLoading, .success("water"), .finishedLoading]
                             let isValid = expectedOutput == outputEvents
                             expect(isValid).to(beTrue())
                         }

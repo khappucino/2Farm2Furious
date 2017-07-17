@@ -4,9 +4,9 @@ import RxSwift
 class AuthenticationKitchen: AuthenticationKitchener {
     
     private let fieldValidating: FieldValidating
-    private let coronaService: CoronaService
+    private let coronaService: CoronaDomainModelServicing
     
-    init(fieldValidating: FieldValidating, coronaService: CoronaService) {
+    init(fieldValidating: FieldValidating, coronaService: CoronaDomainModelServicing) {
         self.fieldValidating = fieldValidating
         self.coronaService = coronaService
     }
@@ -46,7 +46,7 @@ class AuthenticationKitchen: AuthenticationKitchener {
         
         if usernameSuccess && passwordSuccess {
             return coronaService.getCorona().flatMap { (corona) -> Observable<LoginViewState> in
-                Observable.just(LoginViewState.success(corona))
+                Observable.just(LoginViewState.success(corona.ingredients))
                 }
                 .startWith(.startedLoading)
                 .concat(Observable.just(.finishedLoading))

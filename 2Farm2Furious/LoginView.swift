@@ -31,7 +31,7 @@ class LoginView: UIView {
         configureAccessibilityIDs()
     }
     
-    func validatedTextStream() -> Observable<LoginViewEvent> {
+    func validatedTextStream() -> Observable<LoginViewAction> {
         let nonEmptyUsernameEvent = getNonEmptyUserNameEvent()
         let nonEmptyPasswordEvent = getNonEmptyPasswordNameEvent()
         
@@ -99,7 +99,7 @@ class LoginView: UIView {
         }).disposed(by: disposeBag)
     }
     
-    private func getButtonTappedAndTextFieldTexts() -> Observable<LoginViewEvent> {
+    private func getButtonTappedAndTextFieldTexts() -> Observable<LoginViewAction> {
         let userNameTextTypeObs = usernameTextField.rx.text.map { (text) in
             return LoginViewTextType.username(text ?? "")
         }
@@ -112,47 +112,47 @@ class LoginView: UIView {
         let buttonTappedObs =  button.rx.controlEvent(.touchUpInside).asObservable()
         
         return buttonTappedObs.withLatestFrom(combo)
-            .map({ (userNameTextType, passwordTextType) -> LoginViewEvent in
-                return LoginViewEvent.submitButtonPressed(userNameTextType, passwordTextType)
+            .map({ (userNameTextType, passwordTextType) -> LoginViewAction in
+                return LoginViewAction.submitButtonPressed(userNameTextType, passwordTextType)
             })
     }
     
-    private func getUserNameEndedEditingEvent() -> Observable<LoginViewEvent> {
+    private func getUserNameEndedEditingEvent() -> Observable<LoginViewAction> {
         return usernameTextField.rx.controlEvent(.editingDidEnd)
             .withLatestFrom(usernameTextField.rx.text)
             .map { text in
-                return LoginViewEvent.textChanged(.username(text ?? ""))
+                return LoginViewAction.textChanged(.username(text ?? ""))
         }
     }
     
-    private func getPasswordNameEndedEditingEvent() -> Observable<LoginViewEvent> {
+    private func getPasswordNameEndedEditingEvent() -> Observable<LoginViewAction> {
         return passwordTextField.rx.controlEvent(.editingDidEnd)
             .withLatestFrom(passwordTextField.rx.text)
             .map { text in
-                return LoginViewEvent.textChanged(.password(text ?? ""))
+                return LoginViewAction.textChanged(.password(text ?? ""))
         }
     }
     
-    private func getNonEmptyUserNameEvent() -> Observable<LoginViewEvent> {
+    private func getNonEmptyUserNameEvent() -> Observable<LoginViewAction> {
         return usernameTextField.rx.text
             .flatMap { Observable.from(optional: $0) }
             .filter { (text) -> Bool in
                 return !text.isEmpty
             }
-            .map { (text) -> LoginViewEvent in
-                return LoginViewEvent.textChanged(.username(text))
+            .map { (text) -> LoginViewAction in
+                return LoginViewAction.textChanged(.username(text))
         }
         
     }
     
-    private func getNonEmptyPasswordNameEvent() -> Observable<LoginViewEvent> {
+    private func getNonEmptyPasswordNameEvent() -> Observable<LoginViewAction> {
         return passwordTextField.rx.text
             .flatMap { Observable.from(optional: $0) }
             .filter { (text) -> Bool in
                 return !text.isEmpty
             }
-            .map { (text) -> LoginViewEvent in
-                return LoginViewEvent.textChanged(.password(text))
+            .map { (text) -> LoginViewAction in
+                return LoginViewAction.textChanged(.password(text))
         }
     }
     

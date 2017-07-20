@@ -11,9 +11,9 @@ class AuthenticationKitchen: AuthenticationKitchener {
         self.randomQueryService = randomQueryService
     }
     
-    func bindTo(events: Observable<LoginViewEvent>) -> Observable<LoginViewState> {
-        return events.flatMap({ [weak self] (loginViewEvent) -> Observable<LoginViewState> in
-            switch loginViewEvent {
+    func bindTo(actions: Observable<LoginViewAction>) -> Observable<LoginViewState> {
+        return actions.flatMap({ [weak self] (LoginViewAction) -> Observable<LoginViewState> in
+            switch LoginViewAction {
             case .textChanged(let textType):
                 return self?.validateTextType(textType) ?? Observable.empty()
             case .submitButtonPressed(let usernameTextType, let passwordTextType):

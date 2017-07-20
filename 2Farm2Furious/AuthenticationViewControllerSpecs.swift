@@ -35,20 +35,20 @@ class AuthenticationViewControllerSpecs: QuickSpec {
             }
             
             context("when the controller receives events from the loginview") {
-                var sentEvents: [LoginViewEvent]!
+                var sentActions: [LoginViewAction]!
                 beforeEach {
                     subject = createViewControllerWithIdentifier(AuthenticationViewController.ID, container: testContainer) as! AuthenticationViewController
                     subject.loadViewIfNeeded()
                   
-                    sentEvents = [.textChanged(.username("username")),
+                    sentActions = [.textChanged(.username("username")),
                                                     .textChanged(.password("password")),
                                                     .submitButtonPressed(.username("username1"), .password("password1"))]
-                    fakeLoginView.sendFakeEvents(events: sentEvents)
+                    fakeLoginView.sendFakeEvents(events: sentActions)
                 }
                 
                 it("should have sent all the events to the kitchen") {
-                    let receivedEvents = fakeKitchen.receivedEvents
-                    let isEqual = receivedEvents == sentEvents
+                    let receivedActions = fakeKitchen.receivedActions
+                    let isEqual = receivedActions == sentActions
                     expect(isEqual).toEventually(beTrue())
                 }
             }

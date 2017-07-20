@@ -14,11 +14,11 @@ enum LoginViewTextType {
     case password(String)
 }
 
-enum LoginViewEvent {
+enum LoginViewAction {
     case textChanged(LoginViewTextType)
     case submitButtonPressed(LoginViewTextType, LoginViewTextType)
 }
 
 protocol AuthenticationKitchener {
-    func bindTo(events: Observable<LoginViewEvent>) -> Observable<LoginViewState>
+    func bindTo(actions: Observable<LoginViewAction>) -> Observable<LoginViewState>
 }

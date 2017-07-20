@@ -42,8 +42,8 @@ extension LoginViewTextType: Equatable {
     }
 }
 
-extension LoginViewEvent: Equatable {
-    public static func == (lhs: LoginViewEvent, rhs: LoginViewEvent) -> Bool {
+extension LoginViewAction: Equatable {
+    public static func == (lhs: LoginViewAction, rhs: LoginViewAction) -> Bool {
         switch (lhs, rhs) {
         case (.textChanged(let val1), .textChanged(let val2)):
             return val1 == val2

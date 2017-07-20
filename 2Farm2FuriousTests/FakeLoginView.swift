@@ -6,17 +6,17 @@ import RxSwift
 
 class FakeLoginView: LoginView {
 
-    private let publishSubject = PublishSubject<LoginViewEvent>()
+    private let publishSubject = PublishSubject<LoginViewAction>()
     
     override func commonSetup() {
         // do nothing
     }
     
-    func sendFakeEvent(event: LoginViewEvent) {
+    func sendFakeEvent(event: LoginViewAction) {
         publishSubject.onNext(event)
     }
     
-    func sendFakeEvents(events: [LoginViewEvent]) {
+    func sendFakeEvents(events: [LoginViewAction]) {
         for event in events {
             publishSubject.onNext(event)
         }
@@ -27,7 +27,7 @@ class FakeLoginView: LoginView {
         recordedState = textFieldState
     }
     
-    override func validatedTextStream() -> Observable<LoginViewEvent> {
+    override func validatedTextStream() -> Observable<LoginViewAction> {
         return publishSubject.asObservable()
     }
 }

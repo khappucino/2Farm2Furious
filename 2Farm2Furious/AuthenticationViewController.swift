@@ -27,7 +27,7 @@ class AuthenticationViewController: UIViewController {
 
         // the loginview could always emit different events,
         // we would just need to flatmap those events into the VC specific events
-        authenticationKitchener.bindTo(events: loginView.validatedTextStream())
+        authenticationKitchener.bindTo(actions: loginView.validatedTextStream())
             .subscribe(onNext: { [weak self] (loginViewState) in
                 self?.updateState(loginViewState)
             }, onError: { (error) in

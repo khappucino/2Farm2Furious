@@ -13,7 +13,7 @@ class AuthenticationKitchenSpec: QuickSpec {
             var subject: AuthenticationKitchen!
             var fakeFieldValidating: FakeFieldValidating!
             var fakeRandomQueryService: FakeRandomQueryServicing!
-            var inputEventSource: PublishSubject<LoginViewEvent>!
+            var inputEventSource: PublishSubject<LoginViewAction>!
             var outputEvents: [LoginViewState]!
             let disposeBag = DisposeBag()
             
@@ -23,11 +23,11 @@ class AuthenticationKitchenSpec: QuickSpec {
                 fakeFieldValidating = FakeFieldValidating()
                 fakeRandomQueryService = FakeRandomQueryServicing()
                 
-                inputEventSource = PublishSubject<LoginViewEvent>()
+                inputEventSource = PublishSubject<LoginViewAction>()
                 
                 subject = AuthenticationKitchen(fieldValidating: fakeFieldValidating, randomQueryService: fakeRandomQueryService)
                 
-                subject.bindTo(events: inputEventSource.asObservable()).subscribe(onNext: { (outputViewState) in
+                subject.bindTo(actions: inputEventSource.asObservable()).subscribe(onNext: { (outputViewState) in
                     outputEvents.append(outputViewState)
                 }).disposed(by: disposeBag)
             }
